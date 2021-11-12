@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="BracketWOdometerHolder" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find BracketWOdometerHolder_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find BracketWOdometerHolder_description)/urdf/BracketWOdometerHolder.trans" />
+<xacro:include filename="$(find BracketWOdometerHolder_description)/urdf/BracketWOdometerHolder.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3998149126458943e-06 -0.029317218907991206 -0.09441486968599225"/>
+    <mass value="0.9799871442497984"/>
+    <inertia ixx="0.002026" ixy="-0.0" ixz="0.0" iyy="0.001015" iyz="0.000258" izz="0.002299"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://BracketWOdometerHolder_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://BracketWOdometerHolder_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>

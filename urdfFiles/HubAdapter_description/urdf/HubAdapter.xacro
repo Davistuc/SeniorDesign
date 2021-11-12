@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="HubAdapter" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find HubAdapter_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find HubAdapter_description)/urdf/HubAdapter.trans" />
+<xacro:include filename="$(find HubAdapter_description)/urdf/HubAdapter.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.490754814073159e-14 9.768158105354089e-16 -0.011760711575205036"/>
+    <mass value="0.42940294705508114"/>
+    <inertia ixx="0.000137" ixy="-0.0" ixz="0.0" iyy="0.000137" iyz="0.0" izz="0.000222"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://HubAdapter_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://HubAdapter_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>

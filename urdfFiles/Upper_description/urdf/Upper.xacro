@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="Upper" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Upper_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Upper_description)/urdf/Upper.trans" />
+<xacro:include filename="$(find Upper_description)/urdf/Upper.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.213413920694017e-17 -0.3301916779373931 -0.4571999999999985"/>
+    <mass value="2.010840356859735"/>
+    <inertia ixx="0.140242" ixy="0.0" ixz="-0.0" iyy="0.140242" iyz="-0.0" izz="0.000264"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Upper_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Upper_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>

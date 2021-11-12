@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="Lower" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Lower_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Lower_description)/urdf/Lower.trans" />
+<xacro:include filename="$(find Lower_description)/urdf/Lower.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.015875000000000205 -0.3047999237506079 -0.5393469789787211"/>
+    <mass value="0.5724939841863258"/>
+    <inertia ixx="0.025495" ixy="-0.0" ixz="0.0" iyy="0.025326" iyz="0.000161" izz="0.000173"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Lower_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Lower_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
